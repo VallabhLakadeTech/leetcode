@@ -58,11 +58,12 @@ func canJump(nums []int) bool {
 	i := 0
 	lastIndex := len(nums) - 1
 	for i < lastIndex {
-		if i != lastIndex || i < lastIndex || nums[i] != 0 {
+		if (i != lastIndex && i < lastIndex) || nums[i] != 0 {
 			i = i + nums[i]
 		}
 		return false
 	}
+	return true
 }
 
 func main() {
